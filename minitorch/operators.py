@@ -75,7 +75,7 @@ def relu(x: float) -> float:
     """
     if x > 0:
         return x
-    return 0
+    return 0.0
 
 
 EPS = 1e-6
@@ -98,7 +98,7 @@ def log_back(x: float, d: float) -> float:
 
 def inv(x: float) -> float:
     "$f(x) = 1/x$"
-    return 1 / x
+    return 1.0 / x
 
 
 def inv_back(x: float, d: float) -> float:
@@ -110,7 +110,7 @@ def relu_back(x: float, d: float) -> float:
     r"If $f = relu$ compute $d \times f'(x)$"
     if x > 0:
         return d
-    return 0
+    return 0.0
 
 
 # ## Task 0.3
@@ -189,9 +189,9 @@ def reduce(
 
 def sum(ls: Iterable[float]) -> float:
     "Sum up a list using `reduce` and `add`."
-    return reduce(add, 0)(ls)
+    return reduce(add, 0.0)(ls)
 
 
 def prod(ls: Iterable[float]) -> float:
     "Product of a list using `reduce` and `mul`."
-    return reduce(mul, 1)(ls)
+    return reduce(mul, 1.0)(ls)

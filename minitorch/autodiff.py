@@ -22,8 +22,11 @@ def central_difference(f: Any, *vals: Any, arg: int = 0, epsilon: float = 1e-6) 
     Returns:
         An approximation of $f'_i(x_0, \ldots, x_{n-1})$
     """
-    # TODO: Implement for Task 1.1.
-    raise NotImplementedError('Need to implement for Task 1.1')
+    xs_prev = list(vals).copy()
+    xs_prev[arg] -= epsilon
+    xs_next = list(vals).copy()
+    xs_next[arg] += epsilon
+    return (f(*xs_next) - f(*xs_prev)) / (2 * epsilon)
 
 
 variable_count = 1
@@ -61,8 +64,42 @@ def topological_sort(variable: Variable) -> Iterable[Variable]:
     Returns:
         Non-constant Variables in topological order starting from the right.
     """
-    # TODO: Implement for Task 1.4.
-    raise NotImplementedError('Need to implement for Task 1.4')
+    g = dict()
+    vars = dict()
+    vars[variable.unique_id] = variable
+    new = [variable]
+    i = 0
+    while i < len(new):
+        v = new[i]
+        for par in v.parents:
+            if par.is_constant():
+                continue
+            if par.unique_id not in g:
+                g[par.unique_id] = []
+            g[par.unique_id].append(v.unique_id)
+            if par.unique_id not in vars:
+                vars[par.unique_id] = par
+                new.append(par)
+        i += 1
+    ord = []
+    used = set()
+    leaves = []
+    for i in vars.keys():
+        if vars[i].is_leaf():
+            leaves.append(i)
+    def dfs(v):
+        if v in used:
+            return
+        used.add(v)
+        for u in g.get(v, []):
+            dfs(u)
+        ord.append(v)
+    for i in leaves:
+        dfs(i)
+    result = []
+    for i in ord:
+        result.append(vars[i])
+    return result
 
 
 def backpropagate(variable: Variable, deriv: Any) -> None:
@@ -76,8 +113,18 @@ def backpropagate(variable: Variable, deriv: Any) -> None:
 
     No return. Should write to its results to the derivative values of each leaf through `accumulate_derivative`.
     """
-    # TODO: Implement for Task 1.4.
-    raise NotImplementedError('Need to implement for Task 1.4')
+    order = topological_sort(variable)
+    d = dict()
+    d[variable.unique_id] = deriv
+    for var in order:
+        if var.is_leaf():
+            var.accumulate_derivative(d[var.unique_id])
+        else:
+            for par, deriv in var.chain_rule(d[var.unique_id]):
+                if not par.is_constant():
+                    if par.unique_id not in d:
+                        d[par.unique_id] = 0
+                    d[par.unique_id] += deriv
 
 
 @dataclass
