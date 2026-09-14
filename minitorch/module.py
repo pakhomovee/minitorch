@@ -29,15 +29,36 @@ class Module:
         m: Dict[str, Module] = self.__dict__["_modules"]
         return list(m.values())
 
+    def modules_dict(self) -> Dict[str, Module]:
+        "Return the dict of direct children of this module."
+        m: Dict[str, Module] = self.__dict__["_modules"]
+        return list(m.items())
+
+    def get_subtree(self):
+        q = list(self.modules_dict())
+        i = 0
+        while i < len(q):
+            m = q[i][1]
+            items = list(m.modules_dict())
+            for j in range(len(items)):
+                items[j] = (q[i][0] + '.' + items[j][0], items[j][1])
+            q.extend(items)
+            i += 1
+        return q
+
     def train(self) -> None:
         "Set the mode of this module and all descendent modules to `train`."
-        # TODO: Implement for Task 0.4.
-        raise NotImplementedError('Need to implement for Task 0.4')
+        subtree = self.get_subtree()
+        self.training = True
+        for m in subtree:
+            m[1].training = True
 
     def eval(self) -> None:
         "Set the mode of this module and all descendent modules to `eval`."
-        # TODO: Implement for Task 0.4.
-        raise NotImplementedError('Need to implement for Task 0.4')
+        subtree = self.get_subtree()
+        self.training = False
+        for m in subtree:
+            m[1].training = False
 
     def named_parameters(self) -> Sequence[Tuple[str, Parameter]]:
         """
@@ -47,13 +68,22 @@ class Module:
         Returns:
             The name and `Parameter` of each ancestor parameter.
         """
-        # TODO: Implement for Task 0.4.
-        raise NotImplementedError('Need to implement for Task 0.4')
+        res = list(self._parameters.items())
+        subtree = self.get_subtree()
+        for m in subtree:
+            items = list(m[1]._parameters.items())
+            for j in range(len(items)):
+                items[j] = (m[0] + '.' + items[j][0], items[j][1])
+            res.extend(items)
+        return res
 
     def parameters(self) -> Sequence[Parameter]:
         "Enumerate over all the parameters of this module and its descendents."
-        # TODO: Implement for Task 0.4.
-        raise NotImplementedError('Need to implement for Task 0.4')
+        res = list(self._parameters.values())
+        subtree = self.get_subtree()
+        for m in subtree:
+            res.extend(list(m[1]._parameters.values()))
+        return res
 
     def add_parameter(self, k: str, v: Any) -> Parameter:
         """
