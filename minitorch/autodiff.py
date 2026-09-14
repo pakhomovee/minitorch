@@ -117,13 +117,12 @@ def backpropagate(variable: Variable, deriv: Any) -> None:
     d = dict()
     d[variable.unique_id] = deriv
     for var in order:
-        d_curr = d[var.unique_id]
-        if d_curr is None:
+        if var not in d:
             continue
         if var.is_leaf():
-            var.accumulate_derivative(d_curr)
+            var.accumulate_derivative(d[var.unique_id])
         else:
-            for par, deriv in var.chain_rule(d_curr):
+            for par, deriv in var.chain_rule(d[var.unique_id]):
                 if not par.is_constant():
                     if par.unique_id not in d:
                         d[par.unique_id] = 0
