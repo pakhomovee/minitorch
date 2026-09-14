@@ -117,7 +117,7 @@ def backpropagate(variable: Variable, deriv: Any) -> None:
     d = dict()
     d[variable.unique_id] = deriv
     for var in order:
-        if var not in d:
+        if var.unique_id not in d:
             continue
         if var.is_leaf():
             var.accumulate_derivative(d[var.unique_id])
