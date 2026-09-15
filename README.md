@@ -1,7 +1,7 @@
 # Task 2 (scalar) results:
 
 ## run 1
-
+```
 Epoch  10  loss  35.3541676645357 correct 23
 Epoch  20  loss  32.496832319683705 correct 37
 Epoch  30  loss  25.390412653351298 correct 45
@@ -52,9 +52,11 @@ Epoch  470  loss  0.30329044916212555 correct 50
 Epoch  480  loss  0.29203822887784786 correct 50
 Epoch  490  loss  0.28146053624259887 correct 50
 Epoch  500  loss  0.2715030361051413 correct 50
+```
 
 ## run 2
 
+```
 Epoch  10  loss  28.63404596363344 correct 36
 Epoch  20  loss  27.144346297389376 correct 37
 Epoch  30  loss  26.661458383000447 correct 34
@@ -105,9 +107,11 @@ Epoch  470  loss  4.623562906431306 correct 48
 Epoch  480  loss  4.412418445106272 correct 48
 Epoch  490  loss  4.90611352813724 correct 48
 Epoch  500  loss  4.728388776419862 correct 48
+```
 
 # Task 3 (tensor) results:
 
+```
 Epoch  10  loss  26.608135896601627 correct 44
 Epoch  20  loss  17.21210576205033 correct 46
 Epoch  30  loss  11.11502267866969 correct 48
@@ -158,4 +162,4 @@ Epoch  470  loss  0.8962807978206878 correct 50
 Epoch  480  loss  0.8693073862610636 correct 50
 Epoch  490  loss  0.84414092625642 correct 50
 Epoch  500  loss  0.8205809857031107 correct 50
-
+```
