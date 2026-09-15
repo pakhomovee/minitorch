@@ -1,12 +1,161 @@
-# minitorch
-The full minitorch student suite. 
+# Task 2 (scalar) results:
 
+## run 1
 
-To access the autograder: 
+Epoch  10  loss  35.3541676645357 correct 23
+Epoch  20  loss  32.496832319683705 correct 37
+Epoch  30  loss  25.390412653351298 correct 45
+Epoch  40  loss  13.255397015907397 correct 48
+Epoch  50  loss  66.15902356071263 correct 28
+Epoch  60  loss  6.37094260294196 correct 50
+Epoch  70  loss  4.576480433648568 correct 50
+Epoch  80  loss  3.7642646365675843 correct 50
+Epoch  90  loss  21.72866942011828 correct 40
+Epoch  100  loss  3.4717919430234767 correct 50
+Epoch  110  loss  2.7693386178837227 correct 50
+Epoch  120  loss  2.3805309067379232 correct 50
+Epoch  130  loss  2.1033101346071885 correct 50
+Epoch  140  loss  1.886157786474795 correct 50
+Epoch  150  loss  1.7077318095268994 correct 50
+Epoch  160  loss  1.5568644126296909 correct 50
+Epoch  170  loss  1.4269153166672672 correct 50
+Epoch  180  loss  1.3134864970946043 correct 50
+Epoch  190  loss  1.2135874125840032 correct 50
+Epoch  200  loss  1.1251332554623854 correct 50
+Epoch  210  loss  1.0479192418288628 correct 50
+Epoch  220  loss  0.9917360725333693 correct 50
+Epoch  230  loss  1.0282509529757433 correct 50
+Epoch  240  loss  13.891186221246134 correct 45
+Epoch  250  loss  1.2252271786540123 correct 50
+Epoch  260  loss  0.9880953785891645 correct 50
+Epoch  270  loss  0.8920506062194645 correct 50
+Epoch  280  loss  0.8186880681569324 correct 50
+Epoch  290  loss  0.7580635447087828 correct 50
+Epoch  300  loss  0.7070479048545897 correct 50
+Epoch  310  loss  0.6621568443909149 correct 50
+Epoch  320  loss  0.6219620553304713 correct 50
+Epoch  330  loss  0.5857444505203717 correct 50
+Epoch  340  loss  0.5529433904688462 correct 50
+Epoch  350  loss  0.523098749806519 correct 50
+Epoch  360  loss  0.4958359549292681 correct 50
+Epoch  370  loss  0.4708445241971258 correct 50
+Epoch  380  loss  0.4478637040935614 correct 50
+Epoch  390  loss  0.4266721336146057 correct 50
+Epoch  400  loss  0.40708019080753477 correct 50
+Epoch  410  loss  0.38892419287280366 correct 50
+Epoch  420  loss  0.3720619136984142 correct 50
+Epoch  430  loss  0.3563690603364673 correct 50
+Epoch  440  loss  0.3417364621913082 correct 50
+Epoch  450  loss  0.3280677998042815 correct 50
+Epoch  460  loss  0.3152777489562073 correct 50
+Epoch  470  loss  0.30329044916212555 correct 50
+Epoch  480  loss  0.29203822887784786 correct 50
+Epoch  490  loss  0.28146053624259887 correct 50
+Epoch  500  loss  0.2715030361051413 correct 50
 
-* Module 0: https://classroom.github.com/a/qDYKZff9
-* Module 1: https://classroom.github.com/a/6TiImUiy
-* Module 2: https://classroom.github.com/a/0ZHJeTA0
-* Module 3: https://classroom.github.com/a/U5CMJec1
-* Module 4: https://classroom.github.com/a/04QA6HZK
-* Quizzes: https://classroom.github.com/a/bGcGc12k
+## run 2
+
+Epoch  10  loss  28.63404596363344 correct 36
+Epoch  20  loss  27.144346297389376 correct 37
+Epoch  30  loss  26.661458383000447 correct 34
+Epoch  40  loss  28.570803941131633 correct 33
+Epoch  50  loss  25.347838028127164 correct 36
+Epoch  60  loss  24.42996987567053 correct 36
+Epoch  70  loss  23.273209167148668 correct 38
+Epoch  80  loss  20.82888206186555 correct 39
+Epoch  90  loss  19.4348577816141 correct 39
+Epoch  100  loss  18.68844711149313 correct 40
+Epoch  110  loss  16.56501532529688 correct 41
+Epoch  120  loss  15.513135438980562 correct 44
+Epoch  130  loss  18.064614096897973 correct 40
+Epoch  140  loss  15.331033983381738 correct 41
+Epoch  150  loss  14.249230318265134 correct 44
+Epoch  160  loss  15.00695746390583 correct 42
+Epoch  170  loss  13.440853331859758 correct 44
+Epoch  180  loss  12.205416219410848 correct 43
+Epoch  190  loss  13.099184728215366 correct 44
+Epoch  200  loss  13.883050836025628 correct 42
+Epoch  210  loss  12.985526252045668 correct 43
+Epoch  220  loss  7.657457837381958 correct 46
+Epoch  230  loss  8.313222062771748 correct 47
+Epoch  240  loss  13.887922562534252 correct 44
+Epoch  250  loss  7.955095142350365 correct 46
+Epoch  260  loss  6.585471146689718 correct 47
+Epoch  270  loss  11.6838785330211 correct 43
+Epoch  280  loss  6.870996826357243 correct 46
+Epoch  290  loss  7.9380426724476845 correct 46
+Epoch  300  loss  7.602464363071978 correct 46
+Epoch  310  loss  6.2075410465425405 correct 47
+Epoch  320  loss  8.109681979285451 correct 46
+Epoch  330  loss  6.219163142451057 correct 47
+Epoch  340  loss  6.482368426105428 correct 47
+Epoch  350  loss  6.511125719439837 correct 47
+Epoch  360  loss  5.833717778601411 correct 47
+Epoch  370  loss  5.815735516107544 correct 47
+Epoch  380  loss  5.883812705944012 correct 47
+Epoch  390  loss  4.993332377013905 correct 48
+Epoch  400  loss  5.204672373710685 correct 48
+Epoch  410  loss  6.142979904060843 correct 48
+Epoch  420  loss  4.627762949345103 correct 48
+Epoch  430  loss  5.577267631221996 correct 48
+Epoch  440  loss  5.360738670613855 correct 48
+Epoch  450  loss  5.093831421353353 correct 48
+Epoch  460  loss  4.852106732797317 correct 48
+Epoch  470  loss  4.623562906431306 correct 48
+Epoch  480  loss  4.412418445106272 correct 48
+Epoch  490  loss  4.90611352813724 correct 48
+Epoch  500  loss  4.728388776419862 correct 48
+
+# Task 3 (tensor) results:
+
+Epoch  10  loss  26.608135896601627 correct 44
+Epoch  20  loss  17.21210576205033 correct 46
+Epoch  30  loss  11.11502267866969 correct 48
+Epoch  40  loss  8.067751279926329 correct 49
+Epoch  50  loss  19.524348238335048 correct 39
+Epoch  60  loss  6.061453046272595 correct 50
+Epoch  70  loss  5.272006712409334 correct 49
+Epoch  80  loss  10.338248224450064 correct 45
+Epoch  90  loss  6.818955867195395 correct 46
+Epoch  100  loss  4.209389029804375 correct 49
+Epoch  110  loss  4.061763474945503 correct 49
+Epoch  120  loss  5.844140681405528 correct 46
+Epoch  130  loss  5.8947174501197415 correct 46
+Epoch  140  loss  3.8698196703233605 correct 49
+Epoch  150  loss  3.310695216307264 correct 49
+Epoch  160  loss  3.540998370194682 correct 49
+Epoch  170  loss  4.285597246170186 correct 47
+Epoch  180  loss  4.22453099117336 correct 47
+Epoch  190  loss  3.25855511040331 correct 49
+Epoch  200  loss  2.729974695461133 correct 49
+Epoch  210  loss  2.7000494969955215 correct 49
+Epoch  220  loss  3.098616598847768 correct 49
+Epoch  230  loss  3.75528509854265 correct 48
+Epoch  240  loss  3.3466782127408803 correct 49
+Epoch  250  loss  2.405403793905662 correct 49
+Epoch  260  loss  1.9795907914591049 correct 49
+Epoch  270  loss  1.909574144996769 correct 49
+Epoch  280  loss  2.1103391413756176 correct 49
+Epoch  290  loss  2.9833597897946253 correct 49
+Epoch  300  loss  4.790430328079393 correct 47
+Epoch  310  loss  2.871482280243192 correct 49
+Epoch  320  loss  1.4868926334657366 correct 50
+Epoch  330  loss  1.2742648688123828 correct 50
+Epoch  340  loss  1.1939740263526484 correct 50
+Epoch  350  loss  1.148334837873996 correct 50
+Epoch  360  loss  1.1337135222166006 correct 50
+Epoch  370  loss  1.2232812912060382 correct 50
+Epoch  380  loss  1.844270102436254 correct 49
+Epoch  390  loss  8.23555324096484 correct 46
+Epoch  400  loss  3.661609242468245 correct 48
+Epoch  410  loss  1.138227317780137 correct 50
+Epoch  420  loss  1.070667558007184 correct 50
+Epoch  430  loss  1.0285849002042702 correct 50
+Epoch  440  loss  0.9910160566300932 correct 50
+Epoch  450  loss  0.9567780511714171 correct 50
+Epoch  460  loss  0.9253175815335819 correct 50
+Epoch  470  loss  0.8962807978206878 correct 50
+Epoch  480  loss  0.8693073862610636 correct 50
+Epoch  490  loss  0.84414092625642 correct 50
+Epoch  500  loss  0.8205809857031107 correct 50
+
